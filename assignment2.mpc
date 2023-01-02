@@ -1,0 +1,37 @@
+// $Id: assignment2.mpc 378 2010-02-07 22:09:38Z hillj $
+
+project (cs50700-fall2022-composition) {
+  exename = cs50700-fall2022-composition
+  install = .
+
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+    driver.cpp
+  }
+
+  Template_Files {
+    Base_Array.cpp
+    Array.cpp
+    Fixed_Array.cpp
+    Stack.cpp
+    Queue.cpp
+  }
+
+  Header_Files {
+      Base_Array.h
+      Array.h
+      Fixed_Array.h
+      Stack.h
+      Queue.h
+  }
+
+  Inline_Files {
+      Array.inl
+      Fixed_Array.inl
+      Stack.inl
+      Queue.inl
+  }
+}
